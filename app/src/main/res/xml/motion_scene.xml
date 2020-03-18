@@ -4,16 +4,24 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetStart="@layout/fragment_start"
-        motion:constraintSetEnd="@layout/fragment_end"
-        motion:duration="1000">
+        app:constraintSetStart="@layout/fragment_start"
+        app:constraintSetEnd="@layout/fragment_end"
+        app:duration="1000">
 
         <OnSwipe
-            motion:touchAnchorId="@+id/imageView"
-            motion:touchAnchorSide="right"
-            motion:dragDirection="dragUp" />
+            app:touchAnchorId="@+id/mainConstraint"
+            app:touchAnchorSide="bottom"
+            app:dragDirection="dragUp" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="80"
+                motion:motionTarget="@id/textView" />
 
 
+        </KeyFrameSet>
     </Transition>
 
 
