@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@layout/fragment_start"
+        motion:constraintSetEnd="@layout/fragment_end"
+        motion:duration="1000">
+
+        <OnSwipe
+            motion:touchAnchorId="@+id/imageView"
+            motion:touchAnchorSide="right"
+            motion:dragDirection="dragUp" />
+
+
+    </Transition>
+
+
+</MotionScene>
